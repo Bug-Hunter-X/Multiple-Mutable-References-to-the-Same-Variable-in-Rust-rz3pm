@@ -1,0 +1,1 @@
+fn main() {    let mut x = 5;    let y = &mut x;    let z = &mut x;    *y = 6;    *z = 7;    println!("x = {}", x);}This code leads to undefined behavior because it creates two mutable references (`y` and `z`) to the same variable `x`. In Rust, this is forbidden by the borrowing rules, leading to a compiler error unless appropriate measures are taken.
