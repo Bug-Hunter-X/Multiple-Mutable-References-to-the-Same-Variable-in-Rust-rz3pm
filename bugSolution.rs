@@ -1,0 +1,1 @@
+fn main() {    let mut x = 5;    let mut y = x;    y = 6;    x = 7;    println!("x = {}", x); // x = 7    println!("y = {}", y); // y = 6}This solution avoids the problem by creating a copy of the variable before using it.  It eliminates the need for multiple mutable references to the same value.
